@@ -1,6 +1,7 @@
 import PantherPoolVisual from './visuals/PantherPoolVisual';
 import SmartCartVisual from './visuals/SmartCartVisual';
 import HarmonizeVisual from './visuals/HarmonizeVisual';
+import DaraziTravelsVisual from './visuals/DaraziTravelsVisual';
 
 
 const GH_ICON = (
@@ -43,6 +44,18 @@ const featured = [
     gh: 'https://github.com/mohammadabbas393/Harmonize-Music-Based-Dating-App',
     visual: <HarmonizeVisual />,
     reverse: false,
+  },
+  {
+    label: 'Featured Project',
+    title: 'Darazi Travels',
+    desc: [
+      'A full-stack travel agency website built for a real agency in Tripoli, Lebanon. Customers can browse curated travel packages, view the gallery, and reach out through the contact page. An admin panel lets the agency manage packages directly without touching any code.',
+      'The standout feature is Ziggy, an AI travel assistant chatbot powered by Groq and Llama 3.1. Ziggy pulls live package data from Supabase and answers customer questions in real time — prices, inclusions, booking info — while refusing to invent details not in the database.',
+    ],
+    tags: ['Next.js', 'Supabase', 'Groq AI', 'Llama 3.1', 'JavaScript', 'CSS'],
+    gh: 'https://github.com/mohammadabbas393/darazi-travel',
+    visual: <DaraziTravelsVisual />,
+    reverse: true,
   },
 ];
 
@@ -95,13 +108,6 @@ const others = [
     tags: ['Python', 'Voice', 'Automation'],
     gh: 'https://github.com/mohammadabbas393/Jarvis',
     icon: <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>,
-  },
-  {
-    title: 'DaraziTravels',
-    desc: 'A travel website project showcasing destinations and itineraries. Currently in progress — being reworked with a full redesign.',
-    tags: ['HTML', 'CSS', 'In Progress'],
-    gh: 'https://github.com/mohammadabbas393/Travel',
-    icon: <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0"/><path d="M3.6 9h16.8M3.6 15h16.8"/><path d="M11.5 3a17 17 0 0 0 0 18M12.5 3a17 17 0 0 1 0 18"/></svg>,
   },
 ];
 
