@@ -2,6 +2,8 @@ import PantherPoolVisual from './visuals/PantherPoolVisual';
 import SmartCartVisual from './visuals/SmartCartVisual';
 import HarmonizeVisual from './visuals/HarmonizeVisual';
 import DaraziTravelsVisual from './visuals/DaraziTravelsVisual';
+import PkgSentryVisual from './visuals/PkgSentryVisual';
+import QuerliVisual from './visuals/QuerliVisual';
 
 
 const GH_ICON = (
@@ -9,6 +11,32 @@ const GH_ICON = (
 );
 
 const featured = [
+  {
+    label: 'Featured Project',
+    title: 'PkgSentry',
+    desc: [
+      'An AI-powered GitHub App that scans your repositories for vulnerable dependencies. Connects via GitHub App installation, fetches package manifests, queries the OSV vulnerability database, and returns CVEs with severity ratings and one-click fix commands.',
+      'Built entirely on Next.js with no separate backend. The scan pipeline runs on Vercel serverless functions: GitHub JWT auth, parallel OSV lookups, Groq AI summaries, and results stored in Supabase. Includes Stripe billing, free/pro/team tiers, and a monthly scan quota system.',
+    ],
+    tags: ['Next.js 14', 'TypeScript', 'Supabase', 'GitHub App', 'OSV API', 'Groq AI', 'Stripe'],
+    gh: 'https://github.com/mohammadabbas393/pkgsentry',
+    live: 'https://pkgsentry.vercel.app',
+    visual: <PkgSentryVisual />,
+    reverse: false,
+  },
+  {
+    label: 'Featured Project',
+    title: 'Querli',
+    desc: [
+      'A natural language database agent that lets you query any PostgreSQL or MySQL database in plain English. Ask a question, get back SQL, a chart, and a business-language summary — no SQL knowledge required.',
+      'Uses Groq and Llama 3.3-70b to convert questions to SQL against a live schema cache. Includes retry logic that feeds execution errors back to the model for self-correction, recharts visualizations, an insights dashboard with auto-run queries, and Stripe-gated query quotas.',
+    ],
+    tags: ['Next.js 14', 'FastAPI', 'PostgreSQL', 'Groq AI', 'Llama 3.3', 'Supabase', 'Stripe'],
+    gh: 'https://github.com/mohammadabbas393/querli',
+    live: 'https://querli.vercel.app',
+    visual: <QuerliVisual />,
+    reverse: true,
+  },
   {
     label: 'Featured Project',
     title: 'PantherPool',
@@ -129,6 +157,10 @@ export default function Projects() {
                 <div className="pf-tags">{p.tags.map(t => <span key={t}>{t}</span>)}</div>
                 <div className="pf-links">
                   <a href={p.gh} target="_blank" rel="noopener">{GH_ICON} GitHub</a>
+                  {p.live && <a href={p.live} target="_blank" rel="noopener" style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    Live
+                  </a>}
                 </div>
               </div>
               <div className="pf-visual">{p.visual}</div>
