@@ -30,7 +30,7 @@ export default function Navbar() {
         <div className="nav-inner">
           <a href="#hero" className="nav-logo">MA</a>
           <ul className="nav-links">
-            {['about', 'experience', 'projects', 'skills', 'awards'].map(s => (
+            {['about', 'experience', 'projects', 'awards', 'skills'].map(s => (
               <li key={s}><a href={`#${s}`}>{s.charAt(0).toUpperCase() + s.slice(1)}</a></li>
             ))}
             <li><a href="#contact" className="nav-cta">Contact</a></li>
@@ -58,7 +58,7 @@ export default function Navbar() {
 
       <div className={`mobile-menu${menuOpen ? ' open' : ''}`}>
         <ul>
-          {['about', 'experience', 'projects', 'skills', 'awards', 'contact'].map(s => (
+          {['about', 'experience', 'projects', 'awards', 'skills', 'contact'].map(s => (
             <li key={s}>
               <a href={`#${s}`} onClick={closeMenu}>
                 {s.charAt(0).toUpperCase() + s.slice(1)}
