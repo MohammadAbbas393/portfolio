@@ -3,13 +3,13 @@ const awards = [
     year: '2026',
     competition: 'ASA DataFest',
     prizes: ['Best Presentation', 'Best Graph'],
-    description: '48-hour data analysis competition hosted by the American Statistical Association. Recognized twice — for the most compelling presentation and the strongest data visualization.',
+    description: 'A 48-hour data analysis competition run by the American Statistical Association. Won two awards that year for how we presented our findings and built our visualizations.',
   },
   {
     year: '2025',
     competition: 'ASA DataFest',
     prizes: ['Best Use of External Data'],
-    description: '48-hour data analysis competition. Recognized for creatively sourcing and integrating external datasets to deepen the analysis and strengthen the team\'s findings.',
+    description: 'A 48-hour data analysis competition. Recognized for pulling in outside datasets and using them in a way that actually added something meaningful to our analysis.',
   },
 ];
 
@@ -17,7 +17,7 @@ export default function Awards() {
   return (
     <section id="awards" className="section section-alt">
       <div className="container">
-        <h2 className="section-title"><span className="section-num">05.</span> Awards</h2>
+        <h2 className="section-title"><span className="section-num">04.</span> Awards</h2>
         <p className="section-sub">Competitions and recognition.</p>
         <div className="awards-grid">
           {awards.map((a, i) => (

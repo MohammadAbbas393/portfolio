@@ -10,7 +10,7 @@ export default function Skills() {
   return (
     <section id="skills" className="section section-alt">
       <div className="container">
-        <h2 className="section-title"><span className="section-num">04.</span> Skills</h2>
+        <h2 className="section-title"><span className="section-num">05.</span> Skills</h2>
         <div className="skills-grid">
           {groups.map(g => (
             <div className="skill-group" key={g.title}>
